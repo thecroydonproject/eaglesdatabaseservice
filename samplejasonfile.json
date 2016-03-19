@@ -1,0 +1,56 @@
+
+# resut of GET
+
+{
+  "0": {
+    "Id": 1,
+    "Created": 1458319703378783800,
+    "Season": "1945/46",
+    "Round": "15",
+    "Date": "10-09-1946",
+    "Kickofftime": "13:00",
+    "AwayorHome": "A",
+    "Oppenent": "Arsenal",
+    "Resultshalftime": "1:2",
+    "Resultsfulltime": "2:2"
+  },
+  "1": {
+    "Id": 2,
+    "Created": 1458320112144177575,
+    "Season": "1945/46",
+    "Round": "15",
+    "Date": "10-09-1946",
+    "Kickofftime": "13:00",
+    "AwayorHome": "A",
+    "Oppenent": "Arsenal",
+    "Resultshalftime": "1:2",
+    "Resultsfulltime": "2:2"
+  },
+  "2": {
+    "Id": 3,
+    "Created": 1458320135995884770,
+    "Season": "1945/46",
+    "Round": "15",
+    "Date": "10-09-1946",
+    "Kickofftime": "13:00",
+    "AwayorHome": "A",
+    "Oppenent": "liecester",
+    "Resultshalftime": "1:2",
+    "Resultsfulltime": "2:2"
+  }
+}
+
+# POST paylaod
+
+{
+
+  "Season": "1945/46"
+  "Round": "15"
+  "Date": "10-09-1946"
+  "Kickofftime": "13:00"
+  "AwayorHome": "A"
+  "Oppenent": "Arsenal"
+  "Resultshalftime": "1:2"
+  "Resultsfulltime": "2:2"
+}
+

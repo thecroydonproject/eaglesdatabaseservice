@@ -1,0 +1,19 @@
+
+postgres:
+    image: postgres
+    ports:
+        - "7000:5432" # random available host port will be chosen, same as -P
+    volumes:
+        - .:/go/src/app
+
+dbservice:
+    build: ./dbservice
+    links:
+        - postgres # [other container]:[alias in this container]
+        # this will create environment variables in the go container
+        # with ip and port info for the postgres container
+        # also creates entries in /etc/hosts with ip info
+    ports:
+        - "3000:8000" # this is port i'm exposing in the container
+
+
