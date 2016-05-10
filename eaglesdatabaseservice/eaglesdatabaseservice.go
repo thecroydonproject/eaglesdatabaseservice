@@ -168,7 +168,7 @@ func allresults(c *gin.Context) {
 
 	var result []Result
 
-	_, err := dbmap.Select(&result, "select * from eagles2 order by result_id")
+	_, err := dbmap.Select(&result, "select * from eagles2")
 
 	checkErr(err, "Select failed")
 
