@@ -7,7 +7,7 @@ import (
 	"github.com/gin-gonic/gin"
 	_ "github.com/lib/pq"
 	"log"
-	"os"
+	//"os"
 	"strconv"
 	"time"
 )
@@ -49,6 +49,7 @@ func initDb() *gorp.DbMap {
 
 
 
+
 dbUrl := fmt.Sprintf(
 "user=%s dbname=%s password=%s host=%s port=%s sslmode=disable",
 "postgres",
@@ -59,8 +60,10 @@ os.Getenv("POSTGRES_PORT_5432_TCP_PORT"),
 )
 
 
+
 //	dbUrl := os.Getenv("e") //export DATABASE_URL_THECROYDONPROJECT="dbname=databasename user=databaseusername password=password host=localhost port=15432 sslmode=disable"
 
+	//dbUrl := "dbname=cpfc user=cpfc password=cpfc host=localhost port=15432 sslmode=disable"
 	fmt.Println("DB URL Connection is --> " + dbUrl)
 
 	db, err := sql.Open("postgres", dbUrl)
@@ -168,7 +171,7 @@ func allresults(c *gin.Context) {
 
 	var result []Result
 
-	_, err := dbmap.Select(&result, "select * from eagles2")
+	_, err := dbmap.Select(&result, "select * from eagles2 order by result_id")
 
 	checkErr(err, "Select failed")
 
