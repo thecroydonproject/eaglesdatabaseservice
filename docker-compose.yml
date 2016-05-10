@@ -7,7 +7,7 @@ postgres:
         - .:/go/src/app
 
 dbservice:
-    build: ./dbservice
+    build: ./eaglesdatabaseservice
     links:
         - postgres # [other container]:[alias in this container]
         # this will create environment variables in the go container
